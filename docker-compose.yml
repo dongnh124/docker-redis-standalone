@@ -1,0 +1,14 @@
+version: "3.5"
+services:
+  redis-standalone:
+    image: "redis:6.0-alpine"
+    ports:
+      - "6378:6379"
+    networks:
+      - redis_standalone_subnet
+    volumes:
+      - ./data:/data
+
+networks:
+  redis_standalone_subnet:
+    driver: bridge
