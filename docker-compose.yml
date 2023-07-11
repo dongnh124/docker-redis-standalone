@@ -12,3 +12,6 @@ services:
 networks:
   redis_standalone_subnet:
     driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/24
